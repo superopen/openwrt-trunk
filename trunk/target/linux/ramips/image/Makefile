@@ -729,10 +729,12 @@ Image/Build/Profile/NA930=$(call BuildFirmware/CustomFlash/$(1),$(1),na930,NA930
 Image/Build/Profile/MZK-750DHP=$(call BuildFirmware/Default8M/$(1),$(1),mzk-750dhp,MZK-750DHP)
 Image/Build/Profile/Y1=$(call BuildFirmware/Default16M/$(1),$(1),Lenovo-y1,Y1)
 Image/Build/Profile/Y1S=$(call BuildFirmware/Default16M/$(1),$(1),Lenovo-y1s,Y1S)
+Image/Build/Profile/HC5661=$(call BuildFirmware/Default16M/$(1),$(1),HC5661,HC5661,HC5661)
 
 ifeq ($(SUBTARGET),mt7620a)
 define Image/Build/Profile/Default
 	$(call Image/Build/Profile/MT7620a,$(1))
+	$(call Image/Build/Profile/HC5661,$(1))
 	$(call Image/Build/Profile/MT7620a_MT7610e,$(1))
 	$(call Image/Build/Profile/MT7620a_MT7530,$(1))
 	$(call Image/Build/Profile/MT7620a_V22SG,$(1))

@@ -212,6 +212,9 @@ case $board in
 		set_usb_led "lenovo:blue:usb"
 		set_wifi_led "lenovo:blue:wifi"
 		;;
+	HC5661)
+		set_wifi_led "hiwifi:green:wifi"
+		;;
 esac
 
 board_config_flush

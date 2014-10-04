@@ -99,7 +99,8 @@ platform_check_image() {
 	x8 |\
 	zbt-wa05 |\
 	y1 |\
-	y1s)
+	y1s |\
+	HC5661)
 		[ "$magic" != "27051956" ] && {
 			echo "Invalid image type."
 			return 1

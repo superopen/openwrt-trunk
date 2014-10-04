@@ -192,6 +192,9 @@ get_status_led() {
 	y1s)
 		status_led="lenovo:blue:power"
 		;;
+	HC5661)
+		status_led="hiwifi:green:status"
+		;;
 	esac
 }
 

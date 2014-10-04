@@ -1,0 +1,8 @@
+/dts-v1/;
+
+/include/ "hiwifi.dtsi"
+
+/ {
+	compatible = "HiWiFi,HC5661", "ralink,mt7620a-soc";
+	model = "HiWiFi Wireless HC5661 Board";
+};
