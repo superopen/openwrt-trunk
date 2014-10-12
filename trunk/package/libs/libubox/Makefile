@@ -62,7 +62,7 @@ define Package/libubox-lua
   TITLE:=Lua binding for the OpenWrt Basic utility library
 endef
 
-TARGET_CFLAGS += -I$(STAGING_DIR)/usr/include
+TARGET_CFLAGS += -I$(STAGING_DIR)/usr/include -I$(STAGING_DIR)/usr/json-c/include
 CMAKE_OPTIONS = \
 	-DLUAPATH=/usr/lib/lua
 
