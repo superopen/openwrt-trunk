@@ -103,6 +103,10 @@ defconfig: scripts/config/conf prepare-tmpinfo FORCE
 	@if [ -e $(HOME)/.openwrt/defconfig ]; then cp $(HOME)/.openwrt/defconfig .config; fi
 	$< --defconfig=.config Config.in
 
+%_defconfig: scripts/config/conf prepare-tmpinfo FORCE
+        cp -f $(TOPDIR)/defconfig/$@ $(TOPDIR)/.config
+        $< -D $(TOPDIR)/.config Config.in
+
 confdefault-y=allyes
 confdefault-m=allmod
 confdefault-n=allno
