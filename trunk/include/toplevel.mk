@@ -104,8 +104,8 @@ defconfig: scripts/config/conf prepare-tmpinfo FORCE
 	$< --defconfig=.config Config.in
 
 %_defconfig: scripts/config/conf prepare-tmpinfo FORCE
-        cp -f $(TOPDIR)/defconfig/$@ $(TOPDIR)/.config
-        $< -D $(TOPDIR)/.config Config.in
+	cp -f $(TOPDIR)/defconfig/$@ $(TOPDIR)/.config
+	$< --defconfig=$(TOPDIR)/.config Config.in
 
 confdefault-y=allyes
 confdefault-m=allmod
